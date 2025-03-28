@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import TopUsers from './components/TopUsers';
+import TrendingPosts from './components/TrendingPosts';
+import Feed from './components/Feed';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Feed</Link> | 
+        <Link to="/top-users">Top Users</Link> | 
+        <Link to="/trending-posts">Trending Posts</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Feed />} />
+        <Route path="/top-users" element={<TopUsers />} />
+        <Route path="/trending-posts" element={<TrendingPosts />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;

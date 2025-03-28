@@ -1,0 +1,35 @@
+{
+    "users": [
+      { "id": 1, "name": "Alice" },
+      { "id": 2, "name": "Bob" },
+      { "id": 3, "name": "Charlie" }
+    ],
+    "posts": [
+      { 
+        "id": 1, 
+        "userId": 1, 
+        "content": "Hello World!", 
+        "timestamp": "2023-09-20T12:00:00Z",
+        "comments": [
+          { "id": 1, "text": "Nice post!" },
+          { "id": 2, "text": "Thanks for sharing." }
+        ]
+      },
+      { 
+        "id": 2, 
+        "userId": 2, 
+        "content": "React is awesome!", 
+        "timestamp": "2023-09-21T10:00:00Z",
+        "comments": [
+          { "id": 3, "text": "I agree!" }
+        ]
+      },
+      { 
+        "id": 3, 
+        "userId": 1, 
+        "content": "Another post by Alice", 
+        "timestamp": "2023-09-22T08:00:00Z",
+        "comments": []
+      }
+    ]
+  }
